@@ -1,7 +1,7 @@
 /*!
-  Author      : Douglas "Amarelo" Lopes
-  Author URI  : http://douglasamarelo.com/
-  Version     : 1.3.0
+  Author     : Douglas "Amarelo" Lopes
+  Author URI : http://douglasamarelo.com/
+  Version    : 1.3.0
 */
 
 // - https://code.tutsplus.com/tutorials/create-bookmarklets-the-right-way--net-18154
@@ -9,7 +9,7 @@
 // - http://bookmarklets.org/maker/
 
 // Script
-(function(){
+(function() {
 	var reporter     = document.querySelector('#reporter-val span').getAttribute('rel');
 	var assignee     = document.querySelector('#assignee-val span').getAttribute('rel');
 	var collapsedCom = document.querySelector('.collapsed-comments');
@@ -33,7 +33,7 @@
 		}
 
 		// Percorre a lista de todos os autores
-		for (var i = 0; i < commentAuthors.length; i++) {
+		for (var i = 0, len = commentAuthors.length; i < len; i++) {
 			var author = commentAuthors[i].getAttribute('rel');
 
 			// Verifica se os autores e o responsável pela task já estão na lista
