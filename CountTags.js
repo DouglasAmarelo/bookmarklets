@@ -48,6 +48,25 @@
 })();
 
 
+/*
+
+var tagH2 = document.querySelectorAll('h2');
+var resultado = {};
+
+for (const prop in tagH2) {
+	if (tagH2.hasOwnProperty(prop)) {
+		const element = tagH2[prop];
+		resultado[ Number( prop ) + 1 ] = element.textContent.replace(/^\s+/gi, '').replace(/\s+$/gi, '');
+	}
+}
+
+console.log(tagH2[0].tagName + ' | ' + tagH2.length + ' | ' + resultado);
+
+*/
+
+
+
+
 
 
 // Bookmarklet
