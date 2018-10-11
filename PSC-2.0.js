@@ -11,9 +11,9 @@
 // Script
 (function() {
 	var reporter     = document.querySelector('#reporter-val span').getAttribute('rel');
-	var assignee     = document.querySelector('#assignee-val span').getAttribute('rel');
+	var mySelf       = window.JIRA.Users.LoggedInUser.userName()
 	var collapsedCom = document.querySelector('.collapsed-comments');
-	var authorsList  = [ 'marcos_s_melo', 'ursula.marinho', 'carol.barrios', 'marcelo.pavone' ];
+	var authorsList  = [ 'marcos_s_melo', 'ursula.marinho', 'stephani.galvani', 'ricardo.teixeira' ];
 	var commentField = document.querySelector('#comment');
 	var commentText  = commentField.value;
 	var allAuthors   = '';
@@ -37,7 +37,7 @@
 			var author = commentAuthors[i].getAttribute('rel');
 
 			// Verifica se os autores e o responsável pela task já estão na lista
-			if ( authorsList.indexOf( author ) == -1 && author !== assignee ) {
+			if ( authorsList.indexOf( author ) == -1 && author !== mySelf ) {
 				authorsList.push( author );
 			}
 		}
@@ -68,4 +68,4 @@
 })();
 
 // Bookmarklet
-javascript:void%20function(){(function(){function%20e(){var%20e=document.querySelectorAll(%22.action-details%20a%22);-1==u.indexOf(r)%26%26u.push(r);for(var%20n=0;n%3Ce.length;n++){var%20a=e[n].getAttribute(%22rel%22);-1==u.indexOf(a)%26%26a!==o%26%26u.push(a)}t()}function%20t(){for(var%20e=0;e%3Cu.length;e++){var%20t=u[e];l+=%22%20[~%22+t+%22]%20%22}}var%20r=document.querySelector(%22%23reporter-val%20span%22).getAttribute(%22rel%22),o=document.querySelector(%22%23assignee-val%20span%22).getAttribute(%22rel%22),n=document.querySelector(%22.collapsed-comments%22),u=[%22marcos_s_melo%22,%22ursula.marinho%22,%22carol.barrios%22,%22marcelo.pavone%22],a=document.querySelector(%22%23comment%22),c=a.value,l=%22%22;n%26%26n.click(),setTimeout(function(){e(),a.value=c+%22\n%22+l+%22%20PSC%22},2500)})()}();
+javascript:void%20function(){(function(){function%20e(){var%20e=document.querySelectorAll(%22.action-details%20a%22);-1==a.indexOf(t)%26%26a.push(t);for(var%20o=0,u=e.length;u%3Eo;o++){var%20c=e[o].getAttribute(%22rel%22);-1==a.indexOf(c)%26%26c!==n%26%26a.push(c)}r()}function%20r(){for(var%20e=0;e%3Ca.length;e++){var%20r=a[e];i+=%22%20[~%22+r+%22]%20%22}}var%20t=document.querySelector(%22%23reporter-val%20span%22).getAttribute(%22rel%22),n=window.JIRA.Users.LoggedInUser.userName(),o=document.querySelector(%22.collapsed-comments%22),a=[%22marcos_s_melo%22,%22ursula.marinho%22,%22stephani.galvani%22,%22ricardo.teixeira%22],u=document.querySelector(%22%23comment%22),c=u.value,i=%22%22;o%26%26o.click(),setTimeout(function(){e(),u.value=c+%22\n%22+i+%22%20PSC%22},2500)})()}();

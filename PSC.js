@@ -11,8 +11,7 @@
 // Script
 (function(){
 	var commentTexto = $('#comment').val();
-
-  $('#comment').val(commentTexto + '\n [~gabriela.miliati] [~ursula.marinho] [~marcos_s_melo] [~marcelo.pavone] [~felipe.moura] PSC');
+	$('#comment').val(commentTexto + '\n [~gabriela.miliati] [~ursula.marinho] [~marcos_s_melo] [~marcelo.pavone] [~felipe.moura] PSC');
 })();
 
 // Bookmarklet
