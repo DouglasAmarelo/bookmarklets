@@ -18,4 +18,4 @@
 
 
 // Bookmarklet
-javascript:(function(){var%20t=document.querySelectorAll(%22input[type=password]%22);t.forEach(function(t){t.setAttribute(%22type%22,%22text%22)})})();
+javascript:void%20function(){(function(){var%20t=document.querySelectorAll(%22input[type=password]%22);t.forEach(function(t){t.setAttribute(%22type%22,%22text%22)})})()}();
