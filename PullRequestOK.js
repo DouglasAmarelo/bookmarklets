@@ -112,7 +112,7 @@ var author = document.querySelector(
 ).textContent;
 var pullRequestField = document.querySelector('#pull_request_review_body');
 var $formCheckbox = document.querySelector(
-  '.form-checkbox input[value="approve"]'
+  '#pull_requests_submit_review input[value="approve"]'
 );
 var pullRequestResponseOK =
   'Oi @' +
